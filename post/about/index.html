@@ -9,9 +9,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://microhardsmith.github.io/favicon.ico?v=1558359112204">
+<link rel="shortcut icon" href="https://microhardsmith.github.io/favicon.ico?v=1558950953873">
 <link rel="stylesheet" href="https://microhardsmith.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -29,7 +35,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://microhardsmith.github.io">
-        <img src="https://microhardsmith.github.io/images/avatar.png?v=1558359112204" class="site-logo">
+        <img src="https://microhardsmith.github.io/images/avatar.png?v=1558950953873" class="site-logo">
         <h1 class="site-title">本拉希的一亩三分田</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -100,15 +106,23 @@
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
             <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <div class="post-date">2019-05-27</div>
             
             <div class="post-content">
-              <p>这是关于的页面，可以在这里向世界介绍你！</p>
+              <p>a student just graduate from hust</p>
+<p>major in IOT, now working as a backend engineer</p>
+<p>interested in javafx,spring,vert.x django and a lot of things,mainly using java and python,given up C++,too difficult!</p>
 
             </div>
             
             
 
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
             
 
           </div>
@@ -133,6 +147,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '6130a91d01f6b529d1e0',
+        clientSecret: '9d4534c6e8f0351593cabf5a2778b0ac32b823b5',
+        repo: 'microhardsmith.github.io',
+        owner: 'microhardsmith',
+        admin: ['microhardsmith'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 

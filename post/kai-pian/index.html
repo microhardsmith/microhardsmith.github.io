@@ -3,15 +3,21 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Gridea | 本拉希的一亩三分田</title>
+<title>开篇 | 本拉希的一亩三分田</title>
 <meta name="description" content="记录菜鸡老刘的日常debug工作与学习分享">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://microhardsmith.github.io/favicon.ico?v=1558359112204">
+<link rel="shortcut icon" href="https://microhardsmith.github.io/favicon.ico?v=1558950953873">
 <link rel="stylesheet" href="https://microhardsmith.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -29,7 +35,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://microhardsmith.github.io">
-        <img src="https://microhardsmith.github.io/images/avatar.png?v=1558359112204" class="site-logo">
+        <img src="https://microhardsmith.github.io/images/avatar.png?v=1558950953873" class="site-logo">
         <h1 class="site-title">本拉希的一亩三分田</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -98,35 +104,39 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: Gridea</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://microhardsmith.github.io/post/hello-gridea">
-                  <h2 class="post-title">Hello Gridea</h2>
-                </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-
-                </div>
+          <div class="post-detail">
+            <h2 class="post-title">开篇</h2>
+            <div class="post-date">2019-05-27</div>
+            
+              <div class="feature-container" style="background-image: url('https://microhardsmith.github.io/post-images/kai-pian.png')">
               </div>
-              
-                <a class="right" href="https://microhardsmith.github.io/post/hello-gridea">
-                  <div class="feature-container" style="background-image: url('https://microhardsmith.github.io/post-images/hello-gridea.png')">
-                  </div>
-                </a>
-              
-            </article>
-          
+            
+            <div class="post-content">
+              <p>这里是来自hust的菜鸡老刘的博客，在这里会记录日常学习开发中遇到的心得，如果你觉得我写的对你有所帮助，那非常棒棒！如果你觉得我哪些部分的表达有误，欢迎在评论区与我进行交流！</p>
+<p>博客的搭建部分，可以参考 <a href="https://fehey.com/post/hve-notes-start/">这篇博文</a> 我使用的是名叫Gridea的静态网站生成器，主题为自带的simple，简简单单，利用此框架小白也能搭建起自己的个人博客，非常简单</p>
+<p>以后会陆续的更新学习日常，敬请关注</p>
 
-          <div class="pagination-container">
-  
-  
-</div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://microhardsmith.github.io/tag/something" class="tag">
+                    杂谈
+                  </a>
+                
+              </div>
+            
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -148,6 +158,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+  
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '6130a91d01f6b529d1e0',
+        clientSecret: '9d4534c6e8f0351593cabf5a2778b0ac32b823b5',
+        repo: 'microhardsmith.github.io',
+        owner: 'microhardsmith',
+        admin: ['microhardsmith'],
+        id: location.pathname,      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
