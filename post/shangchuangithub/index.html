@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | 本拉希的一亩三分田</title>
+<title>如何将自己编写的项目上传到github上 | 本拉希的一亩三分田</title>
 <meta name="description" content="记录菜鸡老刘的日常debug工作与学习分享">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -105,16 +105,36 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-05-27</div>
+            <h2 class="post-title">如何将自己编写的项目上传到github上</h2>
+            <div class="post-date">2019-07-05</div>
             
             <div class="post-content">
-              <p>a student just graduate from hust</p>
-<p>major in IOT, now working as a backend engineer</p>
-<p>interested in javafx,spring,vert.x django and a lot of things,mainly using java and python,given up C++,too difficult!</p>
+              <p>首先，需要安装git，配置好用户名和密码</p>
+<p>接下来，你需要在自己的github上new 一个 repository作为你的项目，不要添加readme或其他任何信息</p>
+<p>在你的本地项目文件夹中，新建.gitignore文件，在其中写入你不需要在发布中包含的文件</p>
+<p>然后根据官方提示的做法：</p>
+<p>echo &quot;# 2048AI&quot; &gt;&gt; README.md
+git init
+git add README.md
+git commit -m &quot;first commit&quot;
+git remote add origin https://github.com/microhardsmith/2048AI.git
+git push -u origin master</p>
+<p>这是发布一个readme文件的流程，我们依此类推</p>
+<p>git add . 可以添加目录下所有未被忽略掉的文件</p>
+<p>如果你的文件夹中存在超过100m的大文件，那么他会无法提交到远程服务器上，并且在修改提交设置之后也很难进行配置，如果你在之前存在大文件时进行过提交那么你添加gitignore之后也不能成功，需要删除掉以前的commit记录，建议重新来做，删除.git文件夹</p>
+<p>git rm -r --cached .   使用这行命令可以清除掉之前的缓存</p>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://microhardsmith.github.io/post/kai-pian">
+                  <h3 class="post-title">
+                    开篇
+                  </h3>
+                </a>
+              </div>
             
 
             
